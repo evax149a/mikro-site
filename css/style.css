@@ -1,0 +1,68 @@
+:root {
+  /* Fonts */
+  --primary-font: "league_gothicregular", sans-serif;
+  --secondary-font: "Arsenal", sans-serif;
+
+  /* Colors */
+  --main-text-color: #3b2b4b;
+  --bg-color: linear-gradient(
+    180deg,
+    #eddefc,
+    #e1ffe5,
+    #fbfce3,
+    #eefcff,
+    #ffebfc
+  );
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "league_gothicregular";
+  src: url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"),
+    url("../fonts/leaguegothic-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Til styling needs - skal fjernes XX */
+.row {
+  border: 1px solid red;
+}
+
+.col {
+  border: 1px solid blue;
+}
+
+/* slut på skal fjernes */
+
+body {
+  background-image: var(--bg-color);
+}
+
+/* Styling af fonte  */
+h1,
+h2,
+p,
+a {
+  color: var(--main-text-color);
+}
+
+h1 {
+  font-family: var(--primary-font);
+  font-size: 13rem;
+}
+
+h2 {
+  font-family: var(--secondary-font);
+  font-size: 4rem;
+}
+
+p {
+  font-family: var(--secondary-font);
+  font-size: 1.8rem;
+}
