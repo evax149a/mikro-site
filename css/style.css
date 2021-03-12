@@ -38,13 +38,14 @@ html {
 }
 
 /* Til styling needs - skal fjernes XX */
-/* .row {
+.row,
+section {
   border: 1px solid red;
 }
 
 .col {
   border: 1px solid blue;
-} */
+}
 
 /* slut på skal fjernes */
 
@@ -88,8 +89,12 @@ h1 {
 }
 
 h2 {
-  font-family: var(--secondary-font);
+  font-family: var(--primary-font);
   font-size: 3.2rem;
+}
+
+.h2-special {
+  font-family: var(--secondary-font);
 }
 
 p {
@@ -110,7 +115,7 @@ p {
 
 /* Billede styling  */
 .kram-billede {
-  background-image: url(../img/kram.jpg);
+  background-image: url(../img/kram2.jpg);
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 
@@ -162,4 +167,54 @@ p {
 
 .navbar-toggler {
   font-size: 2.5rem;
+}
+
+/* Karrusel */
+.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(1) {
+  background-color: #5cd8eb;
+}
+.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(2) {
+  background-color: #da15cc;
+}
+.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(3) {
+  background-color: #ebe23b;
+}
+.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(4) {
+  background-color: #8944da;
+}
+
+/* .carousel-control-next-icon {
+  background-image: url(
+    data:image/svg + xml,
+    %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"fill="%23fff"%3e%3cpathstroke="rgb(99,17,218)"d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/%3e%3c/svg%3e
+  );
+}
+
+.carousel-control-prev-icon {
+  background-image: url(
+    data:image/svg + xml,
+    %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"fill="%23fff"%3e%3cpathd="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/%3e%3c/svg%3e
+  );
+} */
+
+.carousel-indicators [data-bs-target] {
+  width: 20px;
+  height: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 50px;
+    height: 15px;
+  }
 }
