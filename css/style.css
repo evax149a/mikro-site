@@ -13,6 +13,8 @@
     #eefcff,
     #ffebfc
   );
+
+  --mb-custom: 15rem;
 }
 
 html {
@@ -44,6 +46,10 @@ body {
   background-image: var(--bg-color);
 }
 
+section {
+  margin-bottom: var(--mb-custom);
+}
+
 /* Styling af fonte  */
 h1,
 h2,
@@ -65,4 +71,31 @@ h2 {
 p {
   font-family: var(--secondary-font);
   font-size: 1.8rem;
+}
+
+/* Billede styling  */
+.kram-billede {
+  background-image: url(../img/kram.jpg);
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+
+.overraskelses-billede {
+  background-image: url(../img/overraskelse.jpg);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+}
+
+.kram-billede,
+.overraskelses-billede {
+  background-size: cover;
+  height: 350px;
+  /* width: 50%; */
+  margin-left: auto;
+  background-position: top center;
+}
+
+@media only screen and (min-width: 400px) {
+  .kram-billede,
+  .overraskelses-billede {
+    height: 450px;
+  }
 }
