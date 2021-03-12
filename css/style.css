@@ -5,16 +5,22 @@
 
   /* Colors */
   --main-text-color: #3b2b4b;
+  --nav-text-color: #47325a;
+  --nav-text-color-hover: #3a0b63;
   --bg-color: linear-gradient(
-    180deg,
-    #eddefc,
-    #e1ffe5,
-    #fbfce3,
-    #eefcff,
-    #ffebfc
+    150deg,
+    #fcfcf0,
+    #edfcfc,
+    #f8edfa,
+    #f0fbfc,
+    #fcfcf0
   );
+  --nav-gradient: linear-gradient(150deg, #fcfcf0, #edfcfc);
 
-  --mb-custom: 15rem;
+  --mb-sm-custom: 10rem;
+  --mb-md-custom: 12rem;
+  --mb-lg-custom: 20rem;
+  --mb-xl-custom: 22rem;
 }
 
 html {
@@ -32,13 +38,13 @@ html {
 }
 
 /* Til styling needs - skal fjernes XX */
-.row {
+/* .row {
   border: 1px solid red;
 }
 
 .col {
   border: 1px solid blue;
-}
+} */
 
 /* slut på skal fjernes */
 
@@ -47,7 +53,25 @@ body {
 }
 
 section {
-  margin-bottom: var(--mb-custom);
+  margin-bottom: var(--mb-sm-custom);
+}
+
+@media only screen and (min-width: 450px) {
+  section {
+    margin-bottom: var(--mb-md-custom);
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  section {
+    margin-bottom: var(--mb-lg-custom);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  section {
+    margin-bottom: var(--mb-xl-custom);
+  }
 }
 
 /* Styling af fonte  */
@@ -60,17 +84,28 @@ a {
 
 h1 {
   font-family: var(--primary-font);
-  font-size: 13rem;
+  font-size: 9rem;
 }
 
 h2 {
   font-family: var(--secondary-font);
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 
 p {
   font-family: var(--secondary-font);
   font-size: 1.8rem;
+}
+@media only screen and (min-width: 450px) {
+  h1 {
+    font-size: 13rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  p {
+    font-size: 2rem;
+  }
 }
 
 /* Billede styling  */
@@ -96,6 +131,35 @@ p {
 @media only screen and (min-width: 400px) {
   .kram-billede,
   .overraskelses-billede {
-    height: 450px;
+    height: 650px;
   }
+}
+
+/* Nav bar  */
+.nav-baggrund {
+  background-image: var(--nav-gradient);
+  box-shadow: 2px 2px 8px #f2f2f2;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  color: var(--nav-text-color);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--nav-text-color-hover);
+  text-decoration: underline;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(59,43,75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler {
+  font-size: 2.5rem;
 }
