@@ -38,14 +38,14 @@ html {
 }
 
 /* Til styling needs - skal fjernes XX */
-.row,
+/* .row,
 section {
   border: 1px solid red;
 }
 
 .col {
   border: 1px solid blue;
-}
+} */
 
 /* slut på skal fjernes */
 
@@ -97,6 +97,12 @@ h2 {
   font-family: var(--secondary-font);
 }
 
+h3 {
+  font-family: var(--secondary-font);
+  font-size: 3.2rem;
+  color: var(--main-text-color);
+}
+
 p {
   font-family: var(--secondary-font);
   font-size: 1.8rem;
@@ -131,6 +137,7 @@ p {
   /* width: 50%; */
   margin-left: auto;
   background-position: top center;
+  opacity: 0.85;
 }
 
 @media only screen and (min-width: 400px) {
@@ -169,20 +176,48 @@ p {
   font-size: 2.5rem;
 }
 
+/* Infografik karrusel */
+
+/* #infografik .carousel-inner {
+  background-image: url(../img/infografik-mobile/mobile-infografik-baggrund.png);
+  background-size: cover;
+  height: 1367px;
+} */
+
+#infografik-carousel {
+  position: relative;
+}
+
+#infografik-carousel .carousel-inner {
+  position: absolute;
+}
+
+@media only screen and (min-width: 800px) {
+  #infografik .carousel-inner {
+    background-image: url(../img/infografik-desktop/1desktop-infografik-baggrund.png);
+    background-size: cover;
+    position: static;
+  }
+
+  .infografik-mobile-baggrund {
+    display: none;
+  }
+}
+
 /* Karrusel */
-.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(1) {
+#sektion-6 .carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(1) {
   background-color: #5cd8eb;
 }
-.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(2) {
+#sektion-6 .carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(2) {
   background-color: #da15cc;
 }
-.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(3) {
+#sektion-6 .carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(3) {
   background-color: #ebe23b;
 }
-.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(4) {
+#sektion-6 .carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(4) {
   background-color: #8944da;
 }
-.carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(5) {
+#sektion-6 .carousel-dark .carousel-indicators [data-bs-target]:nth-of-type(5) {
   background-color: #32db41;
 }
 
@@ -200,14 +235,14 @@ p {
   );
 } */
 
-.carousel-indicators [data-bs-target] {
+#sektion-6 .carousel-indicators [data-bs-target] {
   width: 20px;
   height: 10px;
 }
 
 @media only screen and (min-width: 400px) {
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
+  #sektion-6 .carousel-control-next-icon,
+  #sektion-6 .carousel-control-prev-icon {
     display: inline-block;
     width: 4rem;
     height: 4rem;
@@ -216,7 +251,7 @@ p {
     background-size: 100% 100%;
   }
 
-  .carousel-indicators [data-bs-target] {
+  #sektion-6 .carousel-indicators [data-bs-target] {
     width: 50px;
     height: 15px;
   }
