@@ -38,8 +38,7 @@ html {
 }
 
 /* Til styling needs - skal fjernes XX */
-/* .row,
-section {
+/* .row {
   border: 1px solid red;
 }
 
@@ -177,24 +176,61 @@ p {
 }
 
 /* Infografik karrusel */
+/* #infografik-carousel-mobile {
+  height: 800px;
+} */
+
+/* .infografik-mobile-baggrund {
+  display: none;
+} */
 
 /* #infografik .carousel-inner {
   background-image: url(../img/infografik-mobile/mobile-infografik-baggrund.png);
   background-size: cover;
   height: 1367px;
 } */
+/* #infografik-carousel-mobile .carousel-inner {
+  background-image: url(../img/infografik-mobile/mobile-infografik-baggrund.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: static;
+} */
 
-#infografik-carousel {
+#infografik-carousel-mobile {
   position: relative;
 }
 
-#infografik-carousel .carousel-inner {
+#infografik-carousel-mobile .carousel-inner {
   position: absolute;
 }
 
+#infografik-carousel-mobile .carousel-inner .carousel-item img {
+  max-width: 100px;
+  max-width: 45vw;
+}
+
+#infografik-carousel-desktop {
+  display: none;
+}
+
 @media only screen and (min-width: 800px) {
-  #infografik .carousel-inner {
-    background-image: url(../img/infografik-desktop/1desktop-infografik-baggrund.png);
+  #infografik-carousel-mobile,
+  #infografik-carousel-mobile .carousel-inner {
+    display: none;
+    position: static;
+  }
+
+  #infografik-carousel-desktop {
+    display: block;
+    position: relative;
+  }
+
+  #infografik-carousel-desktop .carousel-inner {
+    position: absolute;
+  }
+
+  #infografik-carousel-desktop .carousel-inner {
+    background-image: url(../img/infografik-desktop-2/1desktop-infografik-baggrund.png);
     background-size: cover;
     position: static;
   }
