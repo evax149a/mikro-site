@@ -15,9 +15,9 @@
     #f0fbfc,
     #fcfcf0
   );
-  --nav-gradient: linear-gradient(150deg, #fcfcf0, #edfcfc);
+  --nav-gradient: linear-gradient(150deg, #fcfcf0, #f3fcf6);
 
-  --mb-sm-custom: 10rem;
+  --mb-sm-custom: 7rem;
   --mb-md-custom: 12rem;
   --mb-lg-custom: 20rem;
   --mb-xl-custom: 22rem;
@@ -84,12 +84,12 @@ a {
 
 h1 {
   font-family: var(--primary-font);
-  font-size: 9rem;
+  font-size: 5rem;
 }
 
 h2 {
   font-family: var(--primary-font);
-  font-size: 3.2rem;
+  font-size: 2.8rem;
 }
 
 .h2-special {
@@ -106,6 +106,17 @@ p {
   font-family: var(--secondary-font);
   font-size: 1.8rem;
 }
+
+#splash a,
+#sektion-6 a {
+  font-family: var(--secondary-font);
+  font-size: 1.5rem;
+}
+
+.tekst-bredde {
+  width: 100%;
+}
+
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 13rem;
@@ -114,8 +125,35 @@ p {
     font-size: 4.2rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
+
+  #splash a,
+  #sektion-6 a {
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+  }
+
+  .tekst-bredde {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Splash */
+.btn-outline-dark {
+  color: var(--nav-text-color);
+  border-color: var(--main-text-color);
+  box-shadow: 2px 2px 2px #40364915;
+}
+.btn-outline-dark:hover {
+  background-color: var(--main-text-color);
+  color: white;
 }
 
 /* Billede styling  */
@@ -132,14 +170,21 @@ p {
 .kram-billede,
 .overraskelses-billede {
   background-size: cover;
-  height: 350px;
+  height: 300px;
   /* width: 50%; */
   margin-left: auto;
   background-position: top center;
   opacity: 0.85;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
+  .kram-billede,
+  .overraskelses-billede {
+    height: 450px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .kram-billede,
   .overraskelses-billede {
     height: 650px;
@@ -257,6 +302,10 @@ p {
   background-color: #32db41;
 }
 
+#sektion-6 .text-m-w {
+  max-width: 550px;
+}
+
 /* .carousel-control-next-icon {
   background-image: url(
     data:image/svg + xml,
@@ -276,6 +325,10 @@ p {
   height: 10px;
 }
 
+.alle-ol-img {
+  width: 50%;
+}
+
 @media only screen and (min-width: 400px) {
   #sektion-6 .carousel-control-next-icon,
   #sektion-6 .carousel-control-prev-icon {
@@ -290,5 +343,11 @@ p {
   #sektion-6 .carousel-indicators [data-bs-target] {
     width: 50px;
     height: 15px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .alle-ol-img {
+    width: 25%;
   }
 }
