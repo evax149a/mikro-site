@@ -25,6 +25,8 @@
 
 html {
   font-size: 62.5%;
+  background-image: var(--bg-color);
+  background-color: #fcfcf0;
 }
 
 /* Fonts */
@@ -247,11 +249,25 @@ p {
 
 #infografik-carousel-mobile .carousel-inner {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#infografik-carousel-mobile .carousel-item {
+  position: absolute;
+  margin: auto;
 }
 
 #infografik-carousel-mobile .carousel-inner .carousel-item img {
   max-width: 100px;
   max-width: 45vw;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #infografik-carousel-desktop {
