@@ -1,97 +1,89 @@
 window.addEventListener("DOMContentLoaded", startEggHunt);
 
-let eggsInBasket;
+// Variabler
+let point;
+const myModal = new bootstrap.Modal(
+  document.querySelector("#competitionModal"),
+  {
+    keyboard: false,
+  }
+);
 
 function startEggHunt() {
-  console.log("startet");
-  eggsInBasket = 0;
+  console.log("startEggHunt");
 
-  document.querySelector(".egg").addEventListener("click", addEggToBasket);
+  new bootstrap.Toast(document.querySelector("#liveToast"), {
+    autohide: false,
+  }).show();
+
+  // Nulstil point
+  point = 0;
+
+  // Opdater antal point
+  document.querySelector(".counter").textContent = `${point} æg i kurven`;
+
+  // Klik på egg -> clickEgg
+  document.querySelector(".egg-1").addEventListener("click", clickEgg);
+  document.querySelector(".egg-2").addEventListener("click", clickEgg);
+  document.querySelector(".egg-3").addEventListener("click", clickEgg);
+  document.querySelector(".egg-4").addEventListener("click", clickEgg);
+  document.querySelector(".egg-5").addEventListener("click", clickEgg);
 }
 
-function addEggToBasket() {
-  console.log("added to basket");
+function clickEgg() {
+  console.log("clickEgg");
+  // Ryd op så man ikke kan klikke på den flere gange
+  this.removeEventListener("click", clickEgg);
 
-  eggsInBasket++;
+  this.classList.add("animate__backOutUp", "animate__animated");
+  this.classList.remove("animation-egg-peak-right");
+
+  const eggType = this.dataset.eggtype;
+  const eggInBasket = document.querySelector(`g[data-eggtype=${eggType}]`);
+  eggInBasket.classList.remove("hidden");
+
+  eggInBasket.classList.add("animate__fadeInDownBig", "animate__animated");
+
+  // point++
+  point++;
+
+  // Opdater antal point
+  document.querySelector(".counter").textContent = `${point} æg i kurven`;
+
+  if (point >= 5) {
+    levelComplete();
+  }
 }
 
-// function startEggHunt() {
-// const eggStatus = {
-// blue: false,
-// rede: false,
-// yellow: false,
-// green: false,
-// purple: false
-// };
-// let eggsInBasket = 0;
-// const eggs = document.querySelector(".egg");
-// eggs.forEach(egg, => {
-// egg.addEventListener("click", addEggToBasket);
-// });
+function genstartElement() {
+  console.log("genstartElement");
 
-// function addEggToBasket(event) {
-// const clickedEgg = event.target;
-// if (clickedEgg.dataset.eggtype) {
-// eggStatus.[clickedEgg.dataset.eggtype] = true;
-// eggsInBasket++;
-// showEggInBasket(clickedEgg);
-// } else {
-// console.log("Egg already clicked");
-// }
+  // Ryd op, fjern disappear på element
+  this.classList.remove("disappear");
+}
 
-// checkEggStatus();
-// }
-// function checkEggStatus() {
-// if (eggsInBasket >= 5) {
-//     console.log(yes! vundet!)
-// // Show bootstrap modal thingy magingiiii
-// } else {
-// return;
-// }
-// }
-// function showEggInBasket(egg) {
-// const basket = document.querySelector("#basket");
-// basket.append(egg);
-// basket.querySelector(".counter").textContent = eggsInBasket;
-// }
-// }
+function stopSpillet() {
+  console.log("stopSpillet");
 
-// const eggStatus = {
-//     blue: false,
-//     rede: false,
-//     yellow: false,
-//     green: false,
-//     purple: false
-//     };
-//     let eggsInBasket = 0;
-//     const eggs = document.querySelector(".egg");
-//     eggs.forEach(egg, => {
-//     egg.addEventListener("click", addEggToBasket);
-//     });
+  // Fjern alle eventlisteners
+  document.querySelector(".egg-1").removeEventListener("click", clickEgg);
+  document.querySelector(".egg-2").removeEventListener("click", clickEgg);
+  document.querySelector(".egg-3").removeEventListener("click", clickEgg);
+  document.querySelector(".egg-4").removeEventListener("click", clickEgg);
+  document.querySelector(".egg-5").removeEventListener("click", clickEgg);
 
-//     function addEggToBasket(event) {
-//     const clickedEgg = event.target;
-//     if (clickedEgg.dataset.eggtype) {
-//     eggStatus.[clickedEgg.dataset.eggtype] = true;
-//     eggsInBasket++;
-//     showEggInBasket(clickedEgg);
-//     } else {
-//     console.log("Egg already clicked");
-//     }
+  if (point >= 5) {
+    levelComplete();
+  }
+}
 
-//     checkEggStatus();
-//     }
-//     function checkEggStatus() {
-//     if (eggsInBasket >= 5) {
-//         console.log(yes! vundet!)
-//     // Show bootstrap modal thingy magingiiii
-//     } else {
-//     return;
-//     }
-//     }
-//     function showEggInBasket(egg) {
-//     const basket = document.querySelector("#basket");
-//     basket.append(egg);
-//     basket.querySelector(".counter").textContent = eggsInBasket;
-//     }
-//     }
+function levelComplete() {
+  console.log("levelComplete");
+
+  // Skriv “Level complete - du fjernede XX stencils” ud i konsollen
+  // console.log("Tillykke - du fandt alle " + point + " æg!");
+  // document.querySelector(".counter").textContent =
+  //   "Tillykke - du fandt alle " + point + " æg!";
+
+  myModal.show();
+}

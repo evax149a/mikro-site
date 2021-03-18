@@ -8,6 +8,26 @@
   left: 55%;
 }
 
+.egg-container-2 {
+  top: 40%;
+  left: 55%;
+}
+
+.egg-container-3 {
+  top: 50%;
+  left: 55%;
+}
+
+.egg-container-4 {
+  top: 60%;
+  left: 55%;
+}
+
+.egg-container-5 {
+  top: 70%;
+  left: 55%;
+}
+
 .egg {
   max-width: 60px;
   height: auto;
@@ -30,6 +50,11 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
+}
+
+.disappear,
+.hidden {
+  display: none;
 }
 
 @keyframes egg-peak-right {
@@ -93,4 +118,29 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.konkurrence-info {
+  position: relative;
+}
+
+#liveToastDiv {
+  bottom: 10vw;
+  right: 0;
+}
+
+#basket {
+  width: 300px;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* Toast */
+
+.toast-titel {
+  margin-right: auto;
+  color: var(--main-text-color);
+  font-size: 2rem;
 }
