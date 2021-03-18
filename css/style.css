@@ -184,7 +184,8 @@ p {
   /* width: 50%; */
   margin-left: auto;
   background-position: top center;
-  opacity: 0.85;
+  /* opacity: 1; */
+  filter: saturate(65%);
 }
 
 @media only screen and (min-width: 500px) {
