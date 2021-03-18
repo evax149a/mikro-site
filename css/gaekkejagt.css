@@ -1,0 +1,96 @@
+/* Egggggggg */
+.egg-container {
+  position: absolute;
+}
+
+.egg-container-1 {
+  top: 30%;
+  left: 55%;
+}
+
+.egg {
+  max-width: 60px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.egg:hover {
+  transform: scale(1.25);
+}
+
+.has-egg {
+  position: relative;
+  z-index: 1;
+}
+
+.animation-egg-peak-right {
+  animation-name: egg-peak-right;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes egg-peak-right {
+  0% {
+    transform: rotate(0);
+  }
+
+  65% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(50deg);
+  }
+  72% {
+    transform: rotate(35deg);
+  }
+  74% {
+    transform: rotate(55deg);
+  }
+  76% {
+    transform: rotate(35deg);
+  }
+  78% {
+    transform: rotate(55deg);
+  }
+  80% {
+    transform: rotate(35deg);
+  }
+  82% {
+    transform: rotate(45deg);
+  }
+  95% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.egg-move-right {
+  animation-name: egg-move-right;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes egg-move-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  65% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(50%);
+  }
+  95% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
