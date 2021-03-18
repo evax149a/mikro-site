@@ -5,27 +5,27 @@
 
 .egg-container-1 {
   top: 30%;
-  left: 55%;
+  left: 72%;
 }
 
 .egg-container-2 {
   top: 40%;
-  left: 55%;
+  left: 5%;
 }
 
 .egg-container-3 {
   top: 50%;
-  left: 55%;
+  left: 5%;
 }
 
 .egg-container-4 {
   top: 60%;
-  left: 55%;
+  right: 5%;
 }
 
 .egg-container-5 {
   top: 70%;
-  left: 55%;
+  left: -20%;
 }
 
 .egg {
@@ -34,10 +34,10 @@
   display: block;
   cursor: pointer;
 }
-
+/* 
 .egg:hover {
   transform: scale(1.25);
-}
+} */
 
 .has-egg {
   position: relative;
@@ -135,6 +135,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 1;
 }
 
 /* Toast */

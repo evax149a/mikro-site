@@ -36,6 +36,9 @@ function clickEgg() {
   this.removeEventListener("click", clickEgg);
 
   this.classList.add("animate__backOutUp", "animate__animated");
+  this.addEventListener("animationend", function () {
+    this.classList.add("disappear");
+  });
   this.classList.remove("animation-egg-peak-right");
 
   const eggType = this.dataset.eggtype;
@@ -55,12 +58,12 @@ function clickEgg() {
   }
 }
 
-function genstartElement() {
-  console.log("genstartElement");
+// function genstartElement() {
+//   console.log("genstartElement");
 
-  // Ryd op, fjern disappear på element
-  this.classList.remove("disappear");
-}
+//   // Ryd op, fjern disappear på element
+//   this.classList.remove("disappear");
+// }
 
 function stopSpillet() {
   console.log("stopSpillet");
