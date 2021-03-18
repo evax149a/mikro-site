@@ -121,17 +121,18 @@
   }
 }
 
+/* Modal */
+.modal h3 {
+  font-size: 1.8rem;
+}
+
+/* Konkurrence info */
 .konkurrence-info {
   position: relative;
 }
 
-#liveToastDiv {
-  bottom: 10vw;
-  right: 0;
-}
-
 #basket {
-  width: 300px;
+  width: 200px;
   height: auto;
   position: fixed;
   bottom: 0;
@@ -139,10 +140,113 @@
   z-index: 1;
 }
 
-/* Toast */
+#basket h2 {
+  font-size: 2.5rem;
+}
 
-.toast-titel {
+/* Toast */
+#liveToastDiv {
+  bottom: 30vw;
+  right: 0;
+}
+
+#liveToast {
+  max-width: 250px;
+}
+.toast-titel,
+.modal h3 {
+  font-family: var(--primary-font);
   margin-right: auto;
   color: var(--main-text-color);
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+#liveToast p,
+.modal p,
+.modal label,
+#emailHelp,
+.modal button,
+.modal input {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 400px) {
+  #basket {
+    width: 250px;
+  }
+
+  #basket h2 {
+    font-size: 3.5rem;
+  }
+
+  /* Toast  */
+  #liveToastDiv {
+    bottom: 25vw;
+    right: 0;
+  }
+
+  #liveToast {
+    max-width: 350px;
+  }
+
+  .toast-titel,
+  .modal h3 {
+    font-size: 1.8rem;
+  }
+
+  #liveToast p,
+  .modal p,
+  .modal label,
+  #emailHelp,
+  .modal button,
+  .modal input {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #basket {
+    width: 300px;
+  }
+
+  #basket h2 {
+    font-size: 4.5rem;
+  }
+
+  /* Toast  */
+  #liveToastDiv {
+    bottom: 25vw;
+    right: 0;
+  }
+
+  .toast-titel,
+  .modal h3 {
+    font-size: 2.2rem;
+  }
+
+  #liveToast p,
+  .modal p,
+  .modal label,
+  #emailHelp,
+  .modal button,
+  .modal input {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Toast  */
+  #liveToastDiv {
+    bottom: 15vw;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  /* Toast  */
+  #liveToastDiv {
+    bottom: 10vw;
+    right: 0;
+  }
 }

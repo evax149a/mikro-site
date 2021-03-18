@@ -143,7 +143,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 650px) {
   p,
   label {
     font-size: 1.8rem;
@@ -163,7 +163,13 @@ p {
 
 #splash img {
   display: block;
-  margin-right: 10rem;
+  margin-right: 0rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #splash img {
+    margin-right: 10rem;
+  }
 }
 
 /* Billede styling  */
