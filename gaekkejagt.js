@@ -16,6 +16,16 @@ function startEggHunt() {
     autohide: false,
   }).show();
 
+  document.querySelector(".toast-btn").addEventListener("click", function () {
+    console.log("toast");
+    new bootstrap.Toast(document.querySelector("#liveToast")).show();
+  });
+
+  document.querySelector(".toast-btn2").addEventListener("click", function () {
+    console.log("toast2");
+    new bootstrap.Toast(document.querySelector("#liveToast")).show();
+  });
+
   // Nulstil point
   point = 0;
 
