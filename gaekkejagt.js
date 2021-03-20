@@ -39,7 +39,12 @@ function clickEgg() {
   this.addEventListener("animationend", function () {
     this.classList.add("disappear");
   });
-  this.classList.remove("animation-egg-peak-right");
+  this.classList.remove(
+    "animation-egg-peak-right",
+    "animation-egg-peak-left",
+    "egg-move-right",
+    "egg-move-left"
+  );
 
   const eggType = this.dataset.eggtype;
   const eggInBasket = document.querySelector(`g[data-eggtype=${eggType}]`);
@@ -74,6 +79,47 @@ function stopSpillet() {
   document.querySelector(".egg-3").removeEventListener("click", clickEgg);
   document.querySelector(".egg-4").removeEventListener("click", clickEgg);
   document.querySelector(".egg-5").removeEventListener("click", clickEgg);
+
+  document
+    .querySelector(".egg-1")
+    .classList.remove(
+      "animation-egg-peak-right",
+      "animation-egg-peak-left",
+      "egg-move-right",
+      "egg-move-left"
+    );
+  document
+    .querySelector(".egg-2")
+    .classList.remove(
+      "animation-egg-peak-right",
+      "animation-egg-peak-left",
+      "egg-move-right",
+      "egg-move-left"
+    );
+  document
+    .querySelector(".egg-3")
+    .classList.remove(
+      "animation-egg-peak-right",
+      "animation-egg-peak-left",
+      "egg-move-right",
+      "egg-move-left"
+    );
+  document
+    .querySelector(".egg-4")
+    .classList.remove(
+      "animation-egg-peak-right",
+      "animation-egg-peak-left",
+      "egg-move-right",
+      "egg-move-left"
+    );
+  document
+    .querySelector(".egg-5")
+    .classList.remove(
+      "animation-egg-peak-right",
+      "animation-egg-peak-left",
+      "egg-move-right",
+      "egg-move-left"
+    );
 
   if (point >= 5) {
     levelComplete();

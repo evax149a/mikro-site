@@ -5,27 +5,27 @@
 
 .egg-container-1 {
   top: 30%;
-  left: 68%;
+  left: 50%;
 }
 
 .egg-container-2 {
   top: 40%;
-  left: 5%;
+  left: 70%;
 }
 
 .egg-container-3 {
   top: 50%;
-  left: 5%;
+  left: 12%;
 }
 
 .egg-container-4 {
-  top: 60%;
-  right: 5%;
+  top: 30%;
+  right: 0%;
 }
 
 .egg-container-5 {
-  top: 70%;
-  left: -20%;
+  top: 0%;
+  left: -16%;
 }
 
 .egg {
@@ -34,15 +34,20 @@
   display: block;
   cursor: pointer;
 }
-/* 
+
 .egg:hover {
-  transform: scale(1.25);
-} */
+  transform: scale(1.1);
+}
 
 .has-egg {
   position: relative;
   z-index: 1;
   overflow-x: hidden;
+}
+
+.disappear,
+.hidden {
+  display: none;
 }
 
 .animation-egg-peak-right {
@@ -51,11 +56,6 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-}
-
-.disappear,
-.hidden {
-  display: none;
 }
 
 @keyframes egg-peak-right {
@@ -95,6 +95,51 @@
   }
 }
 
+.animation-egg-peak-left {
+  animation-name: egg-peak-left;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes egg-peak-left {
+  0% {
+    transform: rotate(0);
+  }
+
+  65% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(-50deg);
+  }
+  72% {
+    transform: rotate(-35deg);
+  }
+  74% {
+    transform: rotate(-55deg);
+  }
+  76% {
+    transform: rotate(-35deg);
+  }
+  78% {
+    transform: rotate(-55deg);
+  }
+  80% {
+    transform: rotate(-35deg);
+  }
+  82% {
+    transform: rotate(-45deg);
+  }
+  95% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .egg-move-right {
   animation-name: egg-move-right;
   animation-duration: 10s;
@@ -119,6 +164,91 @@
   100% {
     transform: translateX(0);
   }
+}
+
+.egg-move-left {
+  animation-name: egg-move-left;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes egg-move-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  65% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(-50%);
+  }
+  95% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (min-width: 450px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 800px) {
+}
+
+@media only screen and (min-width: 900px) {
+  .egg-move-right {
+    animation-name: egg-move-right;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+
+  @keyframes egg-move-right {
+    0% {
+      transform: translateX(0);
+    }
+
+    65% {
+      transform: translateX(0);
+    }
+    70% {
+      transform: translateX(120%);
+    }
+    95% {
+      transform: translateX(120%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes egg-move-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    65% {
+      transform: translateX(0);
+    }
+    70% {
+      transform: translateX(-120%);
+    }
+    95% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
 }
 
 /* Modal */
@@ -199,7 +329,7 @@
   .modal p,
   .modal label,
   #emailHelp,
-  .modal button,
+  /* .modal button, */
   .modal input {
     font-size: 1.6rem;
   }
@@ -222,14 +352,14 @@
 
   .toast-titel,
   .modal h3 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   #liveToast p,
-  .modal p,
-  .modal label,
-  #emailHelp,
-  .modal button,
+  /* .modal p, */
+  /* .modal label, */
+  /* #emailHelp, */
+  /* .modal button, */
   .modal input {
     font-size: 2rem;
   }
@@ -240,6 +370,10 @@
   #liveToastDiv {
     bottom: 15vw;
     right: 0;
+  }
+
+  .modal h3 {
+    font-size: 3.8rem;
   }
 }
 
