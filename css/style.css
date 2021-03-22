@@ -121,6 +121,10 @@ p {
   width: 100%;
 }
 
+.tekst-bredde-engagement {
+  width: 100%;
+}
+
 @media only screen and (min-width: 450px) {
   h1 {
     font-size: 13rem;
@@ -141,6 +145,10 @@ p {
 
   .tekst-bredde {
     width: 75%;
+  }
+
+  .tekst-bredde-engagement {
+    width: 55%;
   }
 }
 
@@ -218,8 +226,9 @@ p {
   margin-right: 0rem;
 }
 
+/*  Skal fjernes???? XXXX */
 @media only screen and (min-width: 768px) {
-  #splash img {
+  #splash .left {
     margin-right: 10rem;
   }
 }

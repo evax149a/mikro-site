@@ -1,32 +1,26 @@
-/* Eggggggggssssssssssssss */
+/* Egggggggg */
 .egg-container {
   position: absolute;
-  z-index: 1;
 }
 
 .egg-container-1 {
-  left: 0;
   top: 30%;
+  left: 50%;
 }
 
 .egg-container-2 {
   top: 40%;
-  right: 0;
+  left: 70%;
 }
 
 .egg-container-3 {
   top: 50%;
-  left: 8.5%;
+  left: 12%;
 }
 
-/* .egg-container-4 {
-  top: 0%;
-  right: calc(50% - 47px);
-} */
-
 .egg-container-4 {
-  top: -10%;
-  right: calc(50% - 47px);
+  top: 30%;
+  right: 0%;
 }
 
 .egg-container-5 {
@@ -48,6 +42,13 @@
 .has-egg {
   position: relative;
   z-index: 1;
+  /* overflow-x: hidden; */
+  /* opacity: 0.2; */
+}
+
+.disappear,
+.hidden {
+  display: none;
 }
 
 .animation-egg-peak-right {
@@ -245,6 +246,63 @@
     transform: rotate(0);
     opacity: 0;
   }
+}
+
+@media only screen and (min-width: 450px) {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 800px) {
+}
+
+@media only screen and (min-width: 900px) {
+  .egg-container-2 {
+    top: 40%;
+    left: 80%;
+  }
+
+  @keyframes egg-move-right {
+    0% {
+      transform: translateX(0);
+    }
+
+    65% {
+      transform: translateX(0);
+    }
+    70% {
+      transform: translateX(120%);
+    }
+    95% {
+      transform: translateX(120%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes egg-move-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    65% {
+      transform: translateX(0);
+    }
+    70% {
+      transform: translateX(-120%);
+    }
+    95% {
+      transform: translateX(-120%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
 }
 
 /* Modal */

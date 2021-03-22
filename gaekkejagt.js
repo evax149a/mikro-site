@@ -18,12 +18,16 @@ function startEggHunt() {
 
   document.querySelector(".toast-btn").addEventListener("click", function () {
     console.log("toast");
-    new bootstrap.Toast(document.querySelector("#liveToast")).show();
+    new bootstrap.Toast(document.querySelector("#liveToast"), {
+      autohide: false,
+    }).show();
   });
 
   document.querySelector(".toast-btn2").addEventListener("click", function () {
     console.log("toast2");
-    new bootstrap.Toast(document.querySelector("#liveToast")).show();
+    new bootstrap.Toast(document.querySelector("#liveToast"), {
+      autohide: false,
+    }).show();
   });
 
   // Nulstil point
@@ -42,7 +46,6 @@ function startEggHunt() {
 
 function clickEgg() {
   console.log("clickEgg");
-  // Ryd op så man ikke kan klikke på den flere gange
   this.removeEventListener("click", clickEgg);
 
   this.classList.add("animate__backOutUp", "animate__animated");
@@ -53,7 +56,8 @@ function clickEgg() {
     "animation-egg-peak-right",
     "animation-egg-peak-left",
     "egg-move-right",
-    "egg-move-left"
+    "egg-move-left",
+    "egg-opacity"
   );
 
   const eggType = this.dataset.eggtype;
@@ -72,13 +76,6 @@ function clickEgg() {
     levelComplete();
   }
 }
-
-// function genstartElement() {
-//   console.log("genstartElement");
-
-//   // Ryd op, fjern disappear på element
-//   this.classList.remove("disappear");
-// }
 
 function stopSpillet() {
   console.log("stopSpillet");
@@ -145,4 +142,9 @@ function levelComplete() {
   //   "Tillykke - du fandt alle " + point + " æg!";
 
   myModal.show();
+
+  document.querySelector("#basket").addEventListener("click", function () {
+    console.log("modal");
+    new bootstrap.Modal(document.querySelector("#competitionModal")).show();
+  });
 }
