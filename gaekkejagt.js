@@ -147,4 +147,6 @@ function levelComplete() {
     console.log("modal");
     new bootstrap.Modal(document.querySelector("#competitionModal")).show();
   });
+
+  document.querySelector("#basket").style.cursor = "pointer";
 }

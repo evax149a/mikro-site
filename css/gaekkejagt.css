@@ -10,8 +10,8 @@
 }
 
 .egg-container-2 {
-  top: 40%;
-  right: 7.5%;
+  bottom: 0;
+  right: calc(50% + 30px);
 }
 
 .egg-container-3 {
@@ -25,7 +25,7 @@
 } */
 
 .egg-container-4 {
-  top: -10%;
+  top: 0%;
   right: calc(50% - 47px);
 }
 
@@ -35,10 +35,10 @@
 }
 
 .egg {
-  max-width: 60px;
-  height: auto;
   display: block;
   cursor: pointer;
+  width: 60px;
+  height: 93px;
 }
 
 .egg:hover {
@@ -57,7 +57,7 @@
 .animation-egg-peak-right {
   animation-name: egg-peak-right;
   animation-timing-function: ease-in-out;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -102,7 +102,7 @@
 .animation-egg-peak-left {
   animation-name: egg-peak-left;
   animation-timing-function: ease-in-out;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -146,7 +146,7 @@
 
 .egg-move-right {
   animation-name: egg-move-right;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -172,7 +172,7 @@
 
 .egg-move-left {
   animation-name: egg-move-left;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -196,9 +196,35 @@
   }
 }
 
+.egg-move-top {
+  animation-name: egg-move-top;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes egg-move-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  65% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-50%);
+  }
+  95% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .egg-opacity {
   animation-name: egg-opacity;
-  animation-duration: 6s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -243,6 +269,61 @@
   }
   95% {
     transform: rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+}
+
+.egg-opacity-right {
+  animation-name: egg-opacity-right;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes egg-opacity-right {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+
+  65% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  70% {
+    transform: rotate(50deg);
+    opacity: 1;
+  }
+  72% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  74% {
+    transform: rotate(55deg);
+    opacity: 1;
+  }
+  76% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  78% {
+    transform: rotate(55deg);
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(35deg);
+    opacity: 1;
+  }
+  82% {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+  95% {
+    transform: rotate(45deg);
     opacity: 1;
   }
   100% {
@@ -329,7 +410,7 @@
   .modal p,
   .modal label,
   #emailHelp,
-  /* .modal button, */
+  .modal button,
   .modal input {
     font-size: 1.6rem;
   }
@@ -356,10 +437,10 @@
   }
 
   #liveToast p,
-  /* .modal p, */
-  /* .modal label, */
-  /* #emailHelp, */
-  /* .modal button, */
+  .modal p,
+  .modal label,
+  #emailHelp,
+  .modal button,
   .modal input {
     font-size: 2rem;
   }
