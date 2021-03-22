@@ -11,7 +11,7 @@
 
 .egg-container-2 {
   top: 40%;
-  right: 0;
+  right: 7.5%;
 }
 
 .egg-container-3 {
@@ -31,7 +31,7 @@
 
 .egg-container-5 {
   top: 0%;
-  right: 0%;
+  right: 5%;
 }
 
 .egg {
@@ -48,6 +48,10 @@
 .has-egg {
   position: relative;
   z-index: 1;
+}
+
+.hidden {
+  display: none;
 }
 
 .animation-egg-peak-right {
