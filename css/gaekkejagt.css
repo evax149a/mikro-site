@@ -37,12 +37,26 @@
 .egg {
   display: block;
   cursor: pointer;
-  width: 60px;
-  height: 93px;
+  width: 30px;
+  height: 46.5px;
 }
 
-.egg:hover {
-  transform: scale(1.1);
+@media only screen and (min-width: 450px) {
+  .egg {
+    width: 45px;
+    height: 69.75px;
+  }
+}
+
+/* @media only screen and (min-width: 600px) {
+  .egg {
+    width: 60px;
+    height: 93px;
+  }
+} */
+
+.egg-container:hover {
+  transform: scale(1.2);
 }
 
 .has-egg {

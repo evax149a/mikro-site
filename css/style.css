@@ -130,12 +130,6 @@ button {
 }
 
 @media only screen and (min-width: 450px) {
-  h1 {
-    font-size: 13rem;
-  }
-  h2 {
-    font-size: 4.2rem;
-  }
   p,
   label,
   .btn-lg {
@@ -154,6 +148,13 @@ button {
 }
 
 @media only screen and (min-width: 650px) {
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+
   p,
   label,
   .btn-lg {
@@ -162,6 +163,13 @@ button {
 }
 
 @media only screen and (min-width: 1000px) {
+  /* h1 {
+    font-size: 13rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  } */
+
   .tekst-bredde-engagement {
     width: 55%;
   }
@@ -170,6 +178,15 @@ button {
   label,
   .btn-lg {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 13rem;
+  }
+  h2 {
+    font-size: 4.2rem;
   }
 }
 
@@ -426,6 +443,10 @@ button {
   );
 } */
 
+#sektion-6 {
+  overflow-x: hidden;
+}
+
 #sektion-6 .carousel-inner {
   padding-bottom: 6rem;
 }
@@ -478,7 +499,7 @@ button {
   transform: scaleX(-1);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   #engagement .zigzag {
     display: inline-block;
     max-width: 70px;
