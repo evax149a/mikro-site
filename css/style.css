@@ -381,7 +381,7 @@ button {
   display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 720px) {
   #infografik-carousel-mobile,
   #infografik-carousel-mobile .carousel-inner {
     display: none;
