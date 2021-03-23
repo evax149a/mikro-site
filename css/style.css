@@ -470,6 +470,22 @@ button {
   opacity: 0.9;
 }
 
+#engagement .zigzag {
+  display: none;
+}
+
+#engagement .right img {
+  transform: scaleX(-1);
+}
+
+@media only screen and (min-width: 768px) {
+  #engagement .zigzag {
+    display: inline-block;
+    max-width: 70px;
+    opacity: 0.3;
+  }
+}
+
 /* Footer  */
 
 footer {
