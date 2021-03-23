@@ -457,10 +457,17 @@ button {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .alle-ol-img {
-    width: 25%;
+    width: 20%;
   }
+}
+
+/* Engagement */
+.logo-engagement img {
+  max-width: 40px;
+  vertical-align: middle;
+  opacity: 0.9;
 }
 
 /* Footer  */
@@ -473,8 +480,26 @@ footer {
   z-index: 2;
 }
 
-footer h5 {
+footer .row-footer {
+  flex-shrink: 0;
+  /* width: 100%; */
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer h5,
+footer h4,
+footer a {
   color: var(--yellow);
+  font-family: var(--secondary-font);
+}
+
+footer h5 {
+  font-size: 1.7rem;
 }
 
 footer .center {
@@ -487,12 +512,26 @@ footer .center {
   color: var(--yellow);
 }
 
+.logo-ag {
+  max-width: 60px;
+  vertical-align: middle;
+  color: var(--yellow);
+}
+
 @media only screen and (min-width: 450px) {
+  .logo-engagement img {
+    max-width: 60px;
+  }
+
   footer .center {
     width: 400px;
   }
 
   .logo img {
     max-width: 60px;
+  }
+
+  .logo-ag {
+    max-width: 80px;
   }
 }

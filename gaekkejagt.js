@@ -50,14 +50,16 @@ function clickEgg() {
 
   this.classList.add("animate__backOutUp", "animate__animated");
   this.addEventListener("animationend", function () {
-    this.classList.add("disappear");
+    this.classList.add("hidden");
   });
   this.classList.remove(
     "animation-egg-peak-right",
     "animation-egg-peak-left",
     "egg-move-right",
     "egg-move-left",
-    "egg-opacity"
+    "egg-move-top",
+    "egg-opacity",
+    "egg-opacity-right"
   );
 
   const eggType = this.dataset.eggtype;
@@ -93,7 +95,10 @@ function stopSpillet() {
       "animation-egg-peak-right",
       "animation-egg-peak-left",
       "egg-move-right",
-      "egg-move-left"
+      "egg-move-left",
+      "egg-move-top",
+      "egg-opacity",
+      "egg-opacity-right"
     );
   document
     .querySelector(".egg-2")
@@ -101,7 +106,10 @@ function stopSpillet() {
       "animation-egg-peak-right",
       "animation-egg-peak-left",
       "egg-move-right",
-      "egg-move-left"
+      "egg-move-left",
+      "egg-move-top",
+      "egg-opacity",
+      "egg-opacity-right"
     );
   document
     .querySelector(".egg-3")
@@ -109,7 +117,10 @@ function stopSpillet() {
       "animation-egg-peak-right",
       "animation-egg-peak-left",
       "egg-move-right",
-      "egg-move-left"
+      "egg-move-left",
+      "egg-move-top",
+      "egg-opacity",
+      "egg-opacity-right"
     );
   document
     .querySelector(".egg-4")
@@ -117,7 +128,10 @@ function stopSpillet() {
       "animation-egg-peak-right",
       "animation-egg-peak-left",
       "egg-move-right",
-      "egg-move-left"
+      "egg-move-left",
+      "egg-move-top",
+      "egg-opacity",
+      "egg-opacity-right"
     );
   document
     .querySelector(".egg-5")
@@ -125,7 +139,10 @@ function stopSpillet() {
       "animation-egg-peak-right",
       "animation-egg-peak-left",
       "egg-move-right",
-      "egg-move-left"
+      "egg-move-left",
+      "egg-move-top",
+      "egg-opacity",
+      "egg-opacity-right"
     );
 
   if (point >= 5) {
