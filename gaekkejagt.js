@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", startEggHunt);
 
 // Variabler
 let point;
+
 const myModal = new bootstrap.Modal(
   document.querySelector("#competitionModal"),
   {
@@ -59,7 +60,9 @@ function clickEgg() {
     "egg-move-left",
     "egg-move-top",
     "egg-opacity",
-    "egg-opacity-right"
+    "egg-opacity-right",
+    "egg-jump",
+    "bounce-top"
   );
 
   const eggType = this.dataset.eggtype;
@@ -98,7 +101,9 @@ function stopSpillet() {
       "egg-move-left",
       "egg-move-top",
       "egg-opacity",
-      "egg-opacity-right"
+      "egg-opacity-right",
+      "egg-jump",
+      "bounce-top"
     );
   document
     .querySelector(".egg-2")
@@ -109,7 +114,9 @@ function stopSpillet() {
       "egg-move-left",
       "egg-move-top",
       "egg-opacity",
-      "egg-opacity-right"
+      "egg-opacity-right",
+      "egg-jump",
+      "bounce-top"
     );
   document
     .querySelector(".egg-3")
@@ -120,7 +127,9 @@ function stopSpillet() {
       "egg-move-left",
       "egg-move-top",
       "egg-opacity",
-      "egg-opacity-right"
+      "egg-opacity-right",
+      "egg-jump",
+      "bounce-top"
     );
   document
     .querySelector(".egg-4")
@@ -131,7 +140,9 @@ function stopSpillet() {
       "egg-move-left",
       "egg-move-top",
       "egg-opacity",
-      "egg-opacity-right"
+      "egg-opacity-right",
+      "egg-jump",
+      "bounce-top"
     );
   document
     .querySelector(".egg-5")
@@ -142,7 +153,9 @@ function stopSpillet() {
       "egg-move-left",
       "egg-move-top",
       "egg-opacity",
-      "egg-opacity-right"
+      "egg-opacity-right",
+      "egg-jump",
+      "bounce-top"
     );
 
   if (point >= 5) {
@@ -152,11 +165,6 @@ function stopSpillet() {
 
 function levelComplete() {
   console.log("levelComplete");
-
-  // Skriv “Level complete - du fjernede XX stencils” ud i konsollen
-  // console.log("Tillykke - du fandt alle " + point + " æg!");
-  // document.querySelector(".counter").textContent =
-  //   "Tillykke - du fandt alle " + point + " æg!";
 
   myModal.show();
 
